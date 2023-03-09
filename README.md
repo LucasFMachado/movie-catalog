@@ -1,6 +1,11 @@
 ## Getting Started
 
-First, run the json-server:
+First, install all project dependencies:
+```bash
+yarn
+```
+
+Then, run the json-server:
 ```bash
 yarn server
 ```
