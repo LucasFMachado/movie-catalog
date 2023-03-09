@@ -1,7 +1,7 @@
 import { darken, lighten } from 'polished'
 
 export default {
-  title: 'dark',
+  title: 'default',
 
   sizes: {
     small: '0.7rem',

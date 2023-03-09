@@ -1,10 +1,10 @@
 import { Catalog } from '@/components/Sections/Catalog'
 import { Footer } from '@/components/Sections/Footer'
 import { Header } from '@/components/Sections/Header'
+import { Loading } from '@/components/Shared/Loading'
 import { api } from '@/services/api'
 import { Movie } from '@/types/globalTypes'
 import { useEffect, useState } from 'react'
-import styled from 'styled-components'
 import { Wrapper } from './styles'
 
 export type IPagination = {
@@ -14,8 +14,8 @@ export type IPagination = {
 }
 
 export default function Home() {
-  // const [modalOpen, setModalOpen] = useState(false)
   const [movies, setMovies] = useState<Movie[]>([])
+  const [loading, setLoading] = useState<boolean>()
   const [pagination, setPagination] = useState<IPagination>({
     page: 0,
     registerPerPage: 20,
@@ -23,6 +23,8 @@ export default function Home() {
   })
 
   async function getMovies(page = 0, title = '') {
+    setLoading(true)
+
     let filter = ''
     if (title) {
       filter = `&title=${title}`
@@ -37,6 +39,7 @@ export default function Home() {
       totalCountRegisters: Number(headers['x-total-count']),
     })
     setMovies(data)
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -46,7 +49,7 @@ export default function Home() {
   return (
     <Wrapper>
       <Header handleSearch={getMovies} />
-      <Catalog movies={movies} />
+      {loading ? <Loading /> : <Catalog movies={movies} />}
       <Footer pagination={pagination} onPageChange={getMovies} />
     </Wrapper>
   )
