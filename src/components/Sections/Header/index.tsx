@@ -1,8 +1,8 @@
+import { ChangeEvent, useState } from 'react'
+import { FaSearch } from 'react-icons/fa'
 import { Button } from '@/components/Shared/Button'
 import { Input } from '@/components/Shared/Input'
 import { Content } from './styles'
-import { FaSearch } from 'react-icons/fa'
-import { ChangeEvent, useState } from 'react'
 
 interface HeaderProps {
   handleSearch: (page: number, title: string) => Promise<void>

@@ -7,6 +7,14 @@ interface ICatalogProps {
 }
 
 function Catalog({ movies }: ICatalogProps) {
+  if (movies.length < 1) {
+    return (
+      <Content>
+        <h1>No movies were found.</h1>
+      </Content>
+    )
+  }
+
   return (
     <Content>
       {movies?.map(movie => (

@@ -6,3 +6,9 @@ export type Movie = {
   director: string
   year: number
 }
+
+export type IPagination = {
+  page: number
+  registerPerPage: number
+  totalCountRegisters: number
+}

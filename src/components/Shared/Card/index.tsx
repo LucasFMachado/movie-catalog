@@ -1,9 +1,9 @@
-import { Badge } from '../Badge'
-import { Content } from './styles'
-import { FaSearch } from 'react-icons/fa'
+import { useState } from 'react'
 import { InformationModal } from '@/components/Shared/InformationModal'
 import { Movie } from '@/types/globalTypes'
-import { useState } from 'react'
+import { Badge } from '../Badge'
+import { FaSearch } from 'react-icons/fa'
+import { Content } from './styles'
 
 interface CardProps {
   movie: Movie

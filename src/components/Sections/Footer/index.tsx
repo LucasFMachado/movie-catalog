@@ -1,6 +1,6 @@
 import { PageItem } from '@/components/Shared/Pagination/PageItem'
 import { PageSpace } from '@/components/Shared/Pagination/PageSpace'
-import { IPagination } from '@/pages'
+import { IPagination } from '@/types/globalTypes'
 import { Content } from './styles'
 
 const siblingsCount = 1

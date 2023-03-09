@@ -1,6 +1,5 @@
 import Modal from 'react-modal'
 import { AiOutlineClose } from 'react-icons/ai'
-import styled from 'styled-components'
 import { Movie } from '@/types/globalTypes'
 import { Badge } from '@/components/Shared/Badge'
 import { Container } from './styles'

@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'styled-components'
 import Modal from 'react-modal'
 import Head from 'next/head'
-import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/global'
 import theme from '../styles/themes/default'
 
