@@ -1,6 +1,20 @@
-import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import Modal from 'react-modal'
+import Head from 'next/head'
+import { ThemeProvider } from 'styled-components'
+import GlobalStyle from '../styles/global'
+import theme from '../styles/themes/default'
+
+Modal.setAppElement('#__next')
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider theme={theme}>
+      <Head>
+        <title>Movie Catalog</title>
+      </Head>
+      <Component {...pageProps} />
+      <GlobalStyle />
+    </ThemeProvider>
+  )
 }
