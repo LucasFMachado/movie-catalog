@@ -1,27 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the json-server:
 ```bash
 yarn server
-# or
-yarn server
-# or
-pnpm server
 ```
 
-First, run the application:
+Then, run the application:
 
 ```bash
 yarn dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Finally, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
 ## Technical choices:
